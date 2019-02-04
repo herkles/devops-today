@@ -13,5 +13,8 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- task: DotnetCoreInstaller@0
+  version: '2.2.103'
+  displayname: 'Dotnet sdk'
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
