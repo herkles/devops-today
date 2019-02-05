@@ -19,7 +19,14 @@ namespace DevOpsToday.MSTesting.Tests
     {
       var sut = new HomeController();
       Assert.IsNotNull(sut.Privacy());
+    }
 
+    [TestMethod]
+    public void Test_ErrorAction()
+    {
+      var sut = new HomeController();
+
+      Assert.IsNotNull(sut.Error());
     }
 
   }
