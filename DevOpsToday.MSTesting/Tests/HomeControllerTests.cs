@@ -21,5 +21,13 @@ namespace DevOpsToday.MSTesting.Tests
       Assert.IsNotNull(sut.Privacy());
     }
 
+    [TestMethod]
+    public void Test_showRequestIdMethod()
+    {
+      var sut = new ErrorViewModel(){ RequestId = "Sean" };
+
+      Assert.IsTrue(sut.ShowRequestId);
+    }
+
   }
 }
